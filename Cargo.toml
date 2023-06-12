@@ -1,0 +1,15 @@
+[package]
+name = "check-extensions"
+version = "1.0.0"
+edition = "2021"
+
+[profile.release]
+panic = "abort"
+strip = true
+opt-level = "z"
+lto = true
+codegen-units = 1
+
+[dependencies]
+app_dirs2 = "2.5.5"
+enum-iterator = "1.4.1"

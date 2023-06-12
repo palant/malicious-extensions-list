@@ -65,7 +65,7 @@ impl Browser {
 
     #[cfg(target_os = "windows")]
     pub fn get_profile_root(self) -> Option<PathBuf> {
-        let mut dir = app_dir2::get_data_root(app_dir2::AppDataType::UserData).ok()?;
+        let mut dir = app_dirs2::get_data_root(app_dirs2::AppDataType::UserData).ok()?;
         match self {
             Self::Chrome => {
                 dir.push("Google");
@@ -108,7 +108,7 @@ impl Browser {
 
     #[cfg(target_os = "macos")]
     pub fn get_profile_root(self) -> Option<PathBuf> {
-        let mut dir = app_dir2::get_data_root(app_dir2::AppDataType::UserData).ok()?;
+        let mut dir = app_dirs2::get_data_root(app_dirs2::AppDataType::UserData).ok()?;
         match self {
             Self::Chrome => {
                 dir.push("Google");

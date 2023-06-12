@@ -6,4 +6,4 @@ Note: Some extensions listed are no longer available via Chrome Web Store. If th
 
 ## Using check-extensions utility
 
-Instead of checking extension IDs against the list manually, you can also run the `check-extensions` utility. When run without parameters, it will try locating all browser profiles of Chrome and Chromium-based browsers under your user account. A list of browser profiles to check can also be given explicitly as command line parameters.
+Instead of checking extension IDs against the list manually, you can also [download the check-extensions utility](https://github.com/palant/malicious-extensions-list/releases/). When run without parameters, it will try locating all browser profiles of Chrome and Chromium-based browsers under your user account. A list of browser profiles to check can also be given explicitly as command line parameters.

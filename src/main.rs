@@ -37,6 +37,10 @@ enum Browser {
     EdgeBeta,
     EdgeDev,
     EdgeCanary,
+    Brave,
+    BraveBeta,
+    BraveDev,
+    BraveNightly
 }
 
 impl Browser {
@@ -59,6 +63,24 @@ impl Browser {
             Self::EdgeBeta => dir.push("microsoft-edge-beta"),
             Self::EdgeDev => dir.push("microsoft-edge-dev"),
             Self::EdgeCanary => dir.push("microsoft-edge-unstable"),
+            // https://github.com/brave/brave-core/blob/master/build/commands/lib/start.js#L68
+            // https://github.com/brave/brave-core/blob/master/common/brave_channel_info_unittest.cc#L51
+            Self::Brave => {
+                dir.push("BraveSoftware");
+                dir.push("Brave-Browser");
+            }
+            Self::BraveBeta => {
+                dir.push("BraveSoftware");
+                dir.push("Brave-Browser-Beta");
+            }
+            Self::BraveDev => {
+                dir.push("BraveSoftware");
+                dir.push("Brave-Browser-Dev");
+            }
+            Self::BraveNightly => {
+                dir.push("BraveSoftware");
+                dir.push("Brave-Browser-Nightly");
+            }
         }
         Some(dir)
     }
@@ -101,6 +123,22 @@ impl Browser {
                 dir.push("Microsoft");
                 dir.push("Edge SxS");
             }
+            Self::Brave => {
+                dir.push("BraveSoftware");
+                dir.push("Brave-Browser");
+            }
+            Self::BraveBeta => {
+                dir.push("BraveSoftware");
+                dir.push("Brave-Browser-Beta");
+            }
+            Self::BraveDev => {
+                dir.push("BraveSoftware");
+                dir.push("Brave-Browser-Dev");
+            }
+            Self::BraveNightly => {
+                dir.push("BraveSoftware");
+                dir.push("Brave-Browser-Nightly");
+            }
         }
         dir.push("User Data");
         Some(dir)
@@ -132,6 +170,22 @@ impl Browser {
             Self::EdgeBeta => dir.push("Microsoft Edge Beta"),
             Self::EdgeDev => dir.push("Microsoft Edge Dev"),
             Self::EdgeCanary => dir.push("Microsoft Edge Canary"),
+            Self::Brave => {
+                dir.push("BraveSoftware");
+                dir.push("Brave-Browser");
+            }
+            Self::BraveBeta => {
+                dir.push("BraveSoftware");
+                dir.push("Brave-Browser-Beta");
+            }
+            Self::BraveDev => {
+                dir.push("BraveSoftware");
+                dir.push("Brave-Browser-Dev");
+            }
+            Self::BraveNightly => {
+                dir.push("BraveSoftware");
+                dir.push("Brave-Browser-Nightly");
+            }
         }
         Some(dir)
     }

@@ -236,9 +236,9 @@ fn main() {
         }
 
         if !seen_extension {
-            eprintln!("No installed extensions found.");
+            eprintln!("Unable to find any extensions for this browser.");
         } else if !seen_malicious {
-            eprintln!("No known extensions found.");
+            eprintln!("No malicious extensions found.");
         }
 
         eprintln!();
